@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+  /* Header */
+.classe{
+    text-decoration: none;
+}
+
+
+/* Général - Réinitialisation des marges et des paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps de la page */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #ffffff;
+}
+
+/* Style du header */
+header {
+    background-color: #ffffff;  /* Couleur de fond du header */
+    padding: 10px 0;
+}
+
+/* Style du menu de navigation */
+nav {
+    display: flex;
+    justify-content: space-between;  /* Espace entre le logo et le menu */
+    align-items: center;
+    padding: 0 20px;  /* Espace autour de la navigation */
+}
+
+nav img {
+    max-width: 150px;  /* taille logo */
+}
+
+ul {
+    list-style-type: none;
+    display: flex;  /* Disposition sur une ligne */
+}
+
+ul li {
+    margin-left: 30px;  /* Espacem entre les éléments */
+}
+
+ul li:first-child {
+    margin-left: 0;  /* Pas d'espacement avant le premier élément */
+}
+
+/* Style des liens */
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);  /* Couleur du texte des liens */
+    font-size: 16px;  /* Taille de la police */
+    padding: 8px 15px;  /* Espacement interne des liens */
+    transition: background-color 0.3s ease;  /* Transition fluide pour l'effet hover */
+}
+
+.textLogo{
+    color: black;
+}
+
+h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    color: #FD8D5D;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.titre-centre {
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.spaceBetween {
+    justify-content: space-between;
+}
+
+.alignCenter {
+    align-items: center;
+}
+
+.pucesNone {
+    list-style: none;
+}
+
+
+.recette {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    font-family: sans-serif;
+  }
+  
+  /* Header */
+  .recette-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .recette-actions a {
+    margin-left: 1rem;
+  }
+  
+  /* Conteneur 3 colonnes */
+  .recette-colonnes {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .colonne {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  /* Colonne 1 : images */
+  .image-principale img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .miniatures {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .miniatures img {
+    width: 30%;
+    border-radius: 6px;
+  }
+  
+  /* Colonne 2 : infos */
+  .temps {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+  .temps div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .ingredients ul, .colonne-etapes ul {
+    padding-left: 1.2rem;
+    list-style: disc;
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .recette-colonnes {
+      flex-direction: column;
+    }
+  }
+  
