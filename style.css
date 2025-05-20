@@ -126,7 +126,7 @@ a{
     padding-left: 16px;
 }
 .btn{
-    color: var(--orange);
+    color: var  color(pink);
     padding: 8px 16px;
     border: 1px solid var(--orange);
     border-radius: 32px;
@@ -271,3 +271,154 @@ les resolutions d'ecrans d'apres un petit script sass*/
 
 
 
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    font-family: Montserrat;
+}
+
+
+/*--------------------------------------------------
+🤖 Variables
+----------------------------------------------------*/
+:root{
+    --gap: 32px;
+    --primary: #111;
+    --secondary: #eee;
+    --black: #000;
+    --white: #fff;
+    --grey: #636363;
+    --light-grey: #aaa;
+}
+
+/*--------------------------------------------------
+📦Container et responsive
+---------------------------------------------------*/
+.container{
+    width : 100%;
+    /*vous pouvez enlever le padding si il vous gene*/
+    padding: 16px;
+}
+.container-1000{
+    max-width: 1000px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    /*vous pouvez enlever le padding si il vous gene*/
+    padding: 16px;
+}
+
+/*--------------------------------------------------
+🪄 Mise en page flex
+---------------------------------------------------*/
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.reverse{
+    flex-direction: row-reverse;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.justify-around{
+    justify-content: space-around;
+}
+.justify-center{
+    justify-content: center;
+}
+.align-center{
+    align-items: center;
+}
+.align-start{
+    align-items: flex-start;
+}
+.align-end{
+    align-items: flex-end;
+}
+
+.alternate>div:nth-child(2n){
+    flex-direction: row-reverse;
+}
+.gap{
+    gap:var(--gap);
+}
+
+
+/*--------------------------------------------------
+🧱Largeurs et colonnes
+---------------------------------------------------*/
+
+/*Generation des classes pour la largeur des colonnes selon 
+les resolutions d'ecrans d'apres un petit script sass*/
+
+/*Desktop*/
+.large-1 {
+    width: calc(8.3333333333% - 11 * var(--gap) / 12);
+  }
+  .large-2 {
+    width: calc(16.6666666667% - 5 * var(--gap) / 6);
+  }
+  .large-3 {
+    width: calc(25% - 3 * var(--gap) / 4);
+  }
+  .large-4 {
+    width: calc(33.3333333333% - 2 * var(--gap) / 3);
+  }
+  .large-5 {
+    width: calc(41.6666666667% - 1.4 * var(--gap) / 2.4);
+  }
+  .large-6 {
+    width: calc(50% - 1 * var(--gap) / 2);
+  }
+  .large-7 {
+    width: calc(58.3333333333% - 0.7142857143 * var(--gap) / 1.7142857143);
+  }
+  .large-8 {
+    width: calc(66.6666666667% - 0.5 * var(--gap) / 1.5);
+  }
+  .large-9 {
+    width: calc(75% - 0.3333333333 * var(--gap) / 1.3333333333);
+  }
+  .large-10 {
+    width: calc(83.3333333333% - 0.2 * var(--gap) / 1.2);
+  }
+  .large-11 {
+    width: calc(91.6666666667% - 0.0909090909 * var(--gap) / 1.0909090909);
+  }
+  .large-12 {
+    width: calc(100% - 0 * var(--gap) / 1);
+  }
+
+
+  .card {
+    background-color: #eee;
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  .img-card {
+height: 200px;
+object-fit: cover;
+border-radius: 10px;
+  }
+
+  .btn {
+    background-color: #fb9b2d;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+  }
+
+  .gap-12 {
+    gap: 12px;
+  }
+
+  .marginLire{
+    margin-left:50% ;
+  }

@@ -108,3 +108,55 @@ function etape(etapes) {
     etapes.forEach(i => { recetteEtape += `<li> ${i.numeroEtape}${i.descEtape}</li>` })
     return recetteEtape
 }
+
+
+
+
+
+fetch('data.article.json')
+    .then(response => response.json())
+    .then(data => {
+        // ici et uniquement ici j'ai accès à mon tableau de données
+        afficherArticle(data);
+    });
+
+
+// Rôle : afficher les articles.
+// paramètre : tableau "les articles, chacun avec les propriétés" :
+// return : rien
+
+function afficherArticle(tableauArticle) {
+    tableauArticle.forEach(article => {
+        let titre = article.titre;
+        let resume = article.resume;
+        let date = article.date;
+        let auteur = article.auteur;
+        let srcImg = article.img;
+
+
+        document.getElementById("cardContainer").innerHTML += `
+         <div class="card large-6 flex gap align-center">
+            <!-- partie gauche -->
+            <img src="${srcImg}"
+                alt="" class="large-6 img-card" />
+
+            <!-- partie de droite -->
+            <div class="large-6 flex gap-12 ">
+                <h3>${titre}</h3>
+                <div class="flex justify-between large-12 align-center">
+                    <p>
+                        ${date}
+                    </p>
+                    <p>${auteur}</p>
+
+                </div>
+                <p>${resume}</p>
+                <!-- bouton -->
+                <div class="flex justify-between large-12 align-center">
+                    <p class="btn marginLire">lire l'article</p>
+                </div>
+            </div>
+        </div>`
+
+    });
+}
