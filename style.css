@@ -95,3 +95,6 @@ footer {
   justify-content: space-around;
   margin-top: 3rem;
 }
+.flex {
+  flex: auto;
+}
